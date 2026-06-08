@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>វេបសាយផ្លូវការ | អនុវិទ្យាល័យវាលចម្បាំង</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&family=Moul&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo-title">
+        <div class="logo-img-box">
+          <img src="Gate.jpg" alt="School Logo Gate">
+        </div>
+        <div class="school-name">
+          <h2>អនុវិទ្យាល័យវាលចម្បាំង</h2>
+          <p>Vealchambang Secondary School</p>
+        </div>
+      </div>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> ទំព័រដើម</a></li>
+          <li><a href="#about"><i class="fa-solid fa-circle-info"></i> អំពីសាលា</a></li>
+          <li><a href="#subjects"><i class="fa-solid fa-book"></i> មុខវិជ្ជាសិក្សា</a></li>
+          <li><a href="#infrastructure"><i class="fa-solid fa-building"></i> ហេដ្ឋារចនាសម្ព័ន្ធ</a></li>
+          <li><a href="#gallery"><i class="fa-solid fa-images"></i> សកម្មភាពសាលា</a></li>
+          <li><a href="#statistics"><i class="fa-solid fa-chart-bar"></i> ស្ថិតិសិស្ស</a></li>
+          <li><a href="#location"><i class="fa-solid fa-map-location-dot"></i> ទីតាំងសាលា</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="slider-section" id="home">
+    <div class="slider-container">
+      <div class="slide active">
+        <img src="Campus.jpg" alt="Campus">
+        <div class="slide-caption">
+          <h3>ស្វាគមន៍មកកាន់ អនុវិទ្យាល័យវាលចម្បាំង</h3>
+          <p>កសាងចំណេះដឹង វិន័យ គុណធម៌ និងការច្នៃប្រឌិត</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="Gate.jpg" alt="Gate">
+        <div class="slide-caption">
+          <h3>ច្រកទ្វារនៃចំណេះដឹង និងអនាគត</h3>
+          <p>ទីកន្លែងបណ្តុះបណ្តាលធនធានមនុស្សសម្រាប់សហគមន៍ និងសង្គមជាតិ</p>
+        </div>
+      </div>
+      
+      <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn next" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">អំពីសាលារៀន</h3>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h4>ទីតាំងភូមិសាស្ត្រ</h4>
+          <p>ស្ថិតនៅភូមិព្រៃធំ ឃុំកំពង់ល្ពៅ ស្រុកសំឡូត ខេត្តបាត់ដំបង (មានចម្ងាយ 34km ពីការិយាល័យអប់រំ យុវជន និងកីឡាស្រុកសំឡូត)。</p>
+        </div>
+        
+        <div class="about-card">
+          <div class="card-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <h4>អត្តសញ្ញាណសាលា</h4>
+          <p>សាលារបស់យើងត្រូវបានចុះបញ្ជីផ្លូវការក្នុងប្រព័ន្ធអប់រំជាតិ ដោយមានលេខកូដសម្គាល់សាលា (School Code) គឺ៖ <strong>2110412708</strong>。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-alt" id="subjects">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">មុខវិជ្ជាសិក្សា</h3>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">មុខវិជ្ជាផ្លូវការដែលត្រូវបានបង្រៀនស្របតាមកម្មវិធីសិក្សារបស់ក្រសួងអប់រំ</p>
+      </div>
+
+      <div class="subjects-grid">
+        <div class="subject-item"><i class="fa-solid fa-pen-nib"></i> <span>ភាសាខ្មែរ</span></div>
+        <div class="subject-item"><i class="fa-solid fa-calculator"></i> <span>គណិតវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-atom"></i> <span>រូបវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-flask"></i> <span>គីមីវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-dna"></i> <span>ជីវវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-globe"></i> <span>ផែនដីវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-clock-rotate-left"></i> <span>ប្រវត្តិវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-earth-americas"></i> <span>ភូមិវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-scale-balanced"></i> <span>សីលធម៌-ពលរដ្ឋ</span></div>
+        <div class="subject-item"><i class="fa-solid fa-language"></i> <span>ភាសាអង់គ្លេស</span></div>
+        <div class="subject-item"><i class="fa-solid fa-heart-pulse"></i> <span>បំណិនជីវិត</span></div>
+        <div class="subject-item"><i class="fa-solid fa-person-running"></i> <span>អប់រំកាយ និងកីឡា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-kitchen-set"></i> <span>គេហវិទ្យា</span></div>
+        <div class="subject-item"><i class="fa-solid fa-desktop"></i> <span>កុំព្យូទ័រ (ICT)</span></div>
+        <div class="subject-item"><i class="fa-solid fa-book-bookmark"></i> <span>បណ្ណាល័យ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="infrastructure">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">ហេដ្ឋារចនាសម្ព័ន្ធសាលារៀន</h3>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="infra-grid">
+        <div class="infra-box">
+          <i class="fa-solid fa-school"></i>
+          <span class="infra-number">០៥ ខ្នង</span>
+          <span class="infra-label">អគារសិក្សាសរុប</span>
+        </div>
+        <div class="infra-box">
+          <i class="fa-solid fa-door-open"></i>
+          <span class="infra-number">១០ បន្ទប់</span>
+          <span class="infra-label">បន្ទប់រៀន</span>
+        </div>
+        <div class="infra-box">
+          <i class="fa-solid fa-hotel"></i>
+          <span class="infra-number">០១ បន្ទប់</span>
+          <span class="infra-label">ទីចាត់ការសាលា</span>
+        </div>
+        <div class="infra-box">
+          <i class="fa-solid fa-book-open-reader"></i>
+          <span class="infra-number">០១ បន្ទប់</span>
+          <span class="infra-label">បណ្ណាល័យ</span>
+        </div>
+        <div class="infra-box">
+          <i class="fa-solid fa-desktop"></i>
+          <span class="infra-number">០១ បន្ទប់</span>
+          <span class="infra-label">បន្ទប់កុំព្យូទ័រ</span>
+        </div>
+        <div class="infra-box">
+          <i class="fa-solid fa-restroom"></i>
+          <span class="infra-number">១២ បន្ទប់</span>
+          <span class="infra-label">បន្ទប់ទឹកអនាម័យ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-alt" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">កម្រងរូបភាពសកម្មភាពសាលា</h3>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">ទិដ្ឋភាពទូទៅ អនាម័យ និងបរិស្ថានសិក្សាដ៏ស្រស់បំព្រង</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Campus1.jpg" alt="Campus1">
+          <div class="gallery-overlay"><span>សួនច្បារ និងបរិស្ថានសាលា</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Student1.JPG" alt="Student1">
+          <div class="gallery-overlay"><span>សកម្មភាពអនាម័យ (លាងដៃ) របស់សិស្សានុសិស្ស</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="staff">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">បុគ្គលិកសិក្សា និងលោកគ្រូ-អ្នកគ្រូ</h3>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="staff-summary-container">
+        <div class="staff-info-block">
+          <div class="staff-chart-mock">
+            <div class="gender-box male">
+              <i class="fa-solid fa-user-tie"></i>
+              <h5>លោកគ្រូ (បុរស)</h5>
+              <h2>៧ នាក់</h2>
+            </div>
+            <div class="gender-box female">
+              <i class="fa-solid fa-user-nurse"></i>
+              <h5>អ្នកគ្រូ (នារី)</h5>
+              <h2>២ នាក់</h2>
+            </div>
+          </div>
+          <div class="staff-text">
+            <h4>សហគមន៍គ្រូបង្រៀនយើង</h4>
+            <p>បច្ចុប្បន្ន អនុវិទ្យាល័យវាលចម្បាំង មានលោកគ្រូ-អ្នកគ្រូ និងបុគ្គលិកអប់រំសរុបចំនួន <strong>៩នាក់ (ស្រី ២នាក់)</strong> ដែលមានសមត្ថភាព គរុកោសល្យ និងការប្តេជ្ញាចិត្តខ្ពស់ក្នុងការផ្ទេរចំណេះដឹងជូនដល់សិស្សានុសិស្ស។</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-alt" id="statistics">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">ស្ថិតិសិស្សតាមឆ្នាំសិក្សា</h3>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">ទិន្នន័យប្រៀបធៀបចំនួនសិស្សសរុប និងសិស្សស្រីក្នុងរយៈពេលប៉ុន្មានឆ្នាំចុងក្រោយ</p>
+      </div>
+
+      <div class="stats-main-layout">
+        <div class="chart-container-box">
+          <h4><i class="fa-solid fa-chart-line"></i> ក្រាបស្ថិតិសិស្ស</h4>
+          <canvas id="studentChart"></canvas>
+        </div>
+
+        <div class="table-container-box">
+          <table class="custom-stats-table">
+            <thead>
+              <tr>
+                <th>ឆ្នាំសិក្សា</th>
+                <th>សរុប (នាក់)</th>
+                <th>ស្រី (នាក់)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2020-2021</td><td>357 នាក់</td><td>184 នាក់</td></tr>
+              <tr><td>2021-2022</td><td>394 នាក់</td><td>213 នាក់</td></tr>
+              <tr><td>2022-2023</td><td>381 នាក់</td><td>221 នាក់</td></tr>
+              <tr><td>2023-2024</td><td>383 នាក់</td><td>222 នាក់</td></tr>
+              <tr><td>2024-2025</td><td>390 នាក់</td><td>201 នាក់</td></tr>
+              <tr><td>2025-2026</td><td>363 នាក់</td><td>177 នាក់</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="location">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">ទីតាំងភូមិសាស្ត្រសាលារៀន</h3>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">លោកគ្រូ អ្នកគ្រូ មាតាបិតា និងសិស្សានុសិស្សអាចស្វែងរកទីតាំងច្បាស់លាស់របស់អនុវិទ្យាល័យវាលចម្បាំងតាមរយៈប្លុកខាងក្រោម</p>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-iframe-box">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.337562817342!2d103.00284422838382!3d12.588027999432616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31050f78f4f3159f%3A0x7875a81b4a93e37c!2z4b6f4b6f4beS4b6b4b624b6f4b624beS4b6b4b664beH4b6A4b624b6b4b6b4b624b6E4b6Z!5e1!3m2!1skm!2skh!4v1717830000000!5m2!1skm!2skh" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="map-action-box">
+          <a href="https://google.com.kh/maps/place/%E1%9E%A5%E1%9E%93%E1%9E%BB%E1%9E%9C%E1%9E%B2%E1%9E%B6%E1%9E%9B%E1%9E%B6%E1%9E%99%E1%9E%9C%E1%9E%B6%E1%9E%84/@12.5880302,103.0024987,327m/data=!3m1!1e3!4m5!3m4!1s0x31050f78f4f3159f:0x7875a81b4a93e37c!8m2!3d12.588028!4d103.003424?hl=km&shorturl=1" target="_blank" class="btn-open-map">
+            <i class="fa-solid fa-map-location-dot"></i> បើកក្នុងកម្មវិធី Google Maps ផ្ទាល់
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 គេហទំព័រផ្លូវការ អនុវិទ្យាល័យវាលចម្បាំង | រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+      <p class="footer-subtext">ភូមិព្រៃធំ ឃុំកំពង់ល្ពៅ ស្រុកសំឡូត ខេត្តបាត់ដំបង</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

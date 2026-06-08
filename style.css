@@ -1,0 +1,207 @@
+/* កំណត់លក្ខណៈដើមទូទៅ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kantumruy Pro', sans-serif;
+  background-color: #f4f7f5; /* ផ្ទៃខាងក្រោយពណ៌លាយបៃតងខ្ចីស្រទន់ */
+  color: #1c2e24;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.bg-alt {
+  background-color: #eaf2ec; /* ផ្ទៃប្លុកជំនួសពណ៌បៃតងស្រទន់ */
+}
+
+/* រចនាផ្នែក Header - ពណ៌បៃតងចាស់ (Deep Green) */
+.main-header {
+  background-color: #0f4c3a;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e8a87c;
+  background: white;
+}
+
+.logo-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.school-name h2 {
+  font-family: 'Moul', sans-serif;
+  font-size: 16px;
+  color: #e8a87c;
+  font-weight: normal;
+}
+
+.school-name p {
+  font-size: 11px;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  background-color: #e8a87c;
+  color: #0f4c3a;
+}
+
+/* រចនាផ្នែក Slider */
+.slider-section { background-color: #000; }
+.slider-container { position: relative; max-width: 100%; height: 500px; overflow: hidden; }
+.slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; }
+.slide.active { opacity: 1; }
+.slide img { width: 100%; height: 100%; object-fit: cover; filter: brightness(60%); }
+.slide-caption { position: absolute; bottom: 15%; left: 10%; right: 10%; color: white; animation: fadeInUp 1s ease; }
+.slide-caption h3 { font-family: 'Moul', sans-serif; font-size: 26px; color: #e8a87c; margin-bottom: 15px; font-weight: normal; }
+.slide-caption p { font-size: 16px; max-width: 600px; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(15, 76, 58, 0.6); color: white; border: none; padding: 14px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
+.slider-btn:hover { background: #e8a87c; color: #0f4c3a; }
+.prev { left: 20px; } .next { right: 20px; }
+
+/* រចនាផ្នែកក្បាលចំណងជើងប្លុក */
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-title { font-family: 'Moul', sans-serif; font-size: 20px; color: #0f4c3a; font-weight: normal; }
+.title-underline { width: 70px; height: 4px; background-color: #e8a87c; margin: 12px auto; border-radius: 2px; }
+.section-subtitle { font-size: 14px; color: #52665a; }
+
+/* រចនាផ្នែក អំពីយើង */
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.about-card { background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.03); border-top: 4px solid #0f4c3a; transition: transform 0.3s ease; }
+.about-card:hover { transform: translateY(-5px); }
+.card-icon { font-size: 35px; color: #e8a87c; margin-bottom: 20px; }
+.about-card h4 { font-size: 18px; color: #0f4c3a; margin-bottom: 15px; }
+.about-card p { font-size: 14px; color: #405248; }
+
+/* រចនាប្លុកមុខវិជ្ជាសិក្សា */
+.subjects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; }
+.subject-item { background: white; padding: 18px 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border: 1px solid #d3e2d7; box-shadow: 0 2px 5px rgba(0,0,0,0.01); transition: all 0.3s ease; }
+.subject-item:hover { background-color: #0f4c3a; color: white; transform: scale(1.03); }
+.subject-item i { font-size: 20px; color: #e8a87c; }
+.subject-item:hover i { color: white; }
+.subject-item span { font-size: 14px; font-weight: 600; }
+
+/* រចនាផ្នែក ហេដ្ឋារចនាសម្ព័ន្ធ */
+.infra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.infra-box { background: white; padding: 30px 20px; border-radius: 12px; text-align: center; border: 1px solid #d3e2d7; }
+.infra-box i { font-size: 30px; color: #0f4c3a; margin-bottom: 15px; display: block; }
+.infra-number { display: block; font-size: 20px; font-weight: 700; color: #1c2e24; margin-bottom: 5px; }
+.infra-label { font-size: 13px; color: #52665a; font-weight: 600; }
+
+/* រចនាប្លុកកម្រងរូបភាពសកម្មភាពសាលា */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; }
+.gallery-item { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 300px; border: 4px solid white; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 76, 58, 0.8); color: white; display: flex; justify-content: center; align-items: center; padding: 20px; text-align: center; opacity: 0; transition: opacity 0.4s ease; }
+.gallery-overlay span { font-size: 15px; font-weight: 600; border-bottom: 2px solid #e8a87c; padding-bottom: 5px; }
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* រចនាផ្នែក បុគ្គលិកសិក្សា */
+.staff-summary-container { background: white; border-radius: 16px; padding: 40px; border: 1px solid #d3e2d7; }
+.staff-info-block { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.staff-chart-mock { display: flex; gap: 20px; flex: 1; min-width: 280px; }
+.gender-box { flex: 1; padding: 25px 15px; border-radius: 12px; text-align: center; color: white; }
+.gender-box.male { background-color: #0f4c3a; }
+.gender-box.female { background-color: #e8a87c; color: #0f4c3a; }
+.gender-box i { font-size: 28px; margin-bottom: 10px; }
+.gender-box h5 { font-size: 13px; font-weight: 600; opacity: 0.9; }
+.gender-box h2 { font-size: 24px; margin-top: 5px; }
+.staff-text { flex: 1.5; min-width: 300px; }
+.staff-text h4 { font-size: 20px; color: #0f4c3a; margin-bottom: 15px; }
+.staff-text p { font-size: 15px; color: #405248; }
+
+/* រចនាផ្នែកក្រាប និងតារាង */
+.stats-main-layout { display: flex; flex-direction: column; gap: 40px; }
+.chart-container-box { background: white; padding: 30px; border-radius: 16px; border: 1px solid #d3e2d7; max-width: 800px; margin: 0 auto; width: 100%; }
+.chart-container-box h4 { font-family: 'Moul', sans-serif; font-size: 12px; font-weight: normal; color: #0f4c3a; margin-bottom: 20px; }
+.table-container-box { width: 100%; overflow-x: auto; background: white; border-radius: 12px; border: 1px solid #d3e2d7; }
+.custom-stats-table { width: 100%; border-collapse: collapse; text-align: center; }
+.custom-stats-table th, .custom-stats-table td { padding: 15px; font-size: 14px; border-bottom: 1px solid #edf2f7; }
+.custom-stats-table th { background-color: #0f4c3a; color: white; font-weight: 600; }
+.custom-stats-table tbody tr:hover { background-color: #f4f7f5; }
+
+/* រចនាផ្នែកប្លុកទីតាំង និងផែនទី (Google Maps Styling) */
+.map-layout { display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto; width: 100%; }
+.map-iframe-box { border: 4px solid white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); overflow: hidden; background-color: #fff; }
+.map-action-box { text-align: center; margin-top: 5px; }
+.btn-open-map { display: inline-flex; align-items: center; gap: 10px; background-color: #0f4c3a; color: white; text-decoration: none; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 10px rgba(15, 76, 58, 0.2); transition: all 0.3s ease; }
+.btn-open-map:hover { background-color: #e8a87c; color: #0f4c3a; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(232, 168, 124, 0.3); }
+
+/* ផ្នែកខាងក្រោមនៃគេហទំព័រ */
+.main-footer { background-color: #0f4c3a; color: white; text-align: center; padding: 30px 0; border-top: 4px solid #e8a87c; }
+.footer-content p { font-size: 13px; }
+.footer-subtext { opacity: 0.8; margin-top: 5px; font-size: 11px !important; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .header-container { flex-direction: column; gap: 15px; text-align: center; }
+  .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 5px; }
+  .main-nav a { padding: 6px 10px; font-size: 11px; }
+  .slider-container { height: 250px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item { height: 220px; }
+  .map-iframe-box iframe { height: 300px; }
+  .btn-open-map { width: 100%; justify-content: center; font-size: 13px; }
+  .section-padding { padding: 50px 0; }
+}
