@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", function() {
         {
           label: 'សិស្សសរុប (នាក់)',
           data: totalStudents,
-          backgroundColor: '#0f4c3a', // ពណ៌បៃតងចាស់ ត្រូវគ្នានឹង Theme ថ្មី
+          backgroundColor: '#0f4c3a', 
           borderColor: '#082b21',
           borderWidth: 1
         },
         {
           label: 'ក្នុងនោះស្រី (នាក់)',
           data: femaleStudents,
-          backgroundColor: '#e8a87c', // ពណ៌ទឹកក្រូចទង់ដែងដដែល ដើម្បីឆ្លុះបញ្ចាំងទិន្នន័យច្បាស់
+          backgroundColor: '#e8a87c', 
           borderColor: '#c58b63',
           borderWidth: 1
         }
@@ -90,6 +90,57 @@ document.addEventListener("DOMContentLoaded", function() {
           labels: { font: { family: 'Kantumruy Pro', size: 12 } } 
         }
       }
+    }
+  });
+});
+
+
+// === ៤. មុខងារបញ្ជាប៊ូតុងត្រេបី និង ប៊ូតុងជូនដំណឹង ===
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const notifToggle = document.getElementById('notifToggle');
+  const notifDropdown = document.getElementById('notifDropdown');
+
+  // ចុចបើក/បិទ ម៉ឺនុយត្រេបីលើទូរស័ព្ទ
+  menuToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mainNav.classList.toggle('active');
+    notifDropdown.classList.remove('show');
+    
+    const icon = menuToggle.querySelector('i');
+    if (mainNav.classList.contains('active')) {
+      icon.className = 'fa-solid fa-xmark';
+    } else {
+      icon.className = 'fa-solid fa-bars';
+    }
+  });
+
+  // ចុចបើក/បិទ ប្រអប់សារជូនដំណឹង (Notification Dropdown)
+  notifToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    notifDropdown.classList.toggle('show');
+    mainNav.classList.remove('active');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+
+  // ចុចលើ Link ម៉ឺនុយណាមួយ ឱ្យវាលាក់ខ្លួនវិញស្វ័យប្រវត្ត
+  const links = document.querySelectorAll('.main-nav a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('active');
+      menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+    });
+  });
+
+  // ចុចលើផ្ទៃខាងក្រៅផ្សេងៗ ឱ្យវាបិទ Dropdown និងម៉ឺនុយទៅវិញទាំងអស់
+  document.addEventListener('click', function(e) {
+    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+      mainNav.classList.remove('active');
+      menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+    }
+    if (!notifDropdown.contains(e.target) && !notifToggle.contains(e.target)) {
+      notifDropdown.classList.remove('show');
     }
   });
 });
